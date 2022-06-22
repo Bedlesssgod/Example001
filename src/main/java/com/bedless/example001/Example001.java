@@ -2,6 +2,7 @@ package com.bedless.example001;
 
 import co.aikar.commands.PaperCommandManager;
 import com.bedless.example001.commands.ExampleCommand;
+import com.bedless.example001.events.ExampleEventHandler;
 import com.bedless.example001.utils.ExampleRepo;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -34,6 +35,7 @@ public final class Example001 extends JavaPlugin {
     }
 
     public void registerEvents(){
+        getServer().getPluginManager().registerEvents(new ExampleEventHandler(), this);
         console.sendMessage(ExampleRepo.PREFIX + ChatColor.AQUA + "Registering Events");
     }
 

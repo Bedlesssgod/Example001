@@ -8,6 +8,7 @@ public class ExampleRepo {
 
     public static final String PREFIX = ChatColor.translateAlternateColorCodes('&', "&8[&3&lEXAMPLE&8]" + ChatColor.RESET + " ");
 
+
     public static synchronized ExampleRepo getInstance() {
         if(instance == null) {
             instance = new ExampleRepo();
